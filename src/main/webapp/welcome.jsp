@@ -19,7 +19,6 @@
 		<br>
 		<br>
 		<s:a value="/seller/login.jsp">Login as Seller</s:a>
-	</s:form>
-
+	</s:form> 
 </body>
 </html>

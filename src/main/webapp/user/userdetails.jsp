@@ -13,45 +13,20 @@
 <body>
 	<h1>Enter your contact details</h1>
 
-	<s:form action="/userdetails" method="post">
-		<s:textfield label="Name * " name="name"></s:textfield>
-		<s:textfield label="Bidder's email * " name="emailid"></s:textfield>
-		<s:textfield label="Phone" name="phone"></s:textfield>
-		<s:textfield label="Postal address" name="poa"></s:textfield>
+	<s:form action="/enteruserdetails">
+		<s:textfield label="Name" name="UserName" requiredLabel="true"></s:textfield>
+		<s:textfield label="Bidder's email" name="Email" requiredLabel="true"></s:textfield>
+		<s:textfield label="Phone" name="Phone"></s:textfield>
+		<s:textfield label="Postal address" name="Address"></s:textfield>
+		<s:token />
 		<br>
-		<s:submit />
 		<br>
-		<s:reset />
+		<tr>
+			<td colspan="5">
+			<s:submit value="Register" name="RegisterBtn" theme="simple"></s:submit> 
+			<s:submit value="Reset" name="ResetBtn" theme="simple"></s:submit></td>
+		</tr>
 	</s:form>
-
-	<!--<s:form action="/userdetails" method="post">
-		<table style="with: 50%">
-			<tr>
-				<td>First Name</td>
-				<td><input type="text" name="first_name" /></td>
-			</tr>
-			<tr>
-				<td>Last Name</td>
-				<td><input type="text" name="last_name" /></td>
-			</tr>
-			<tr>
-				<td>UserName</td>
-				<td><input type="text" name="username" /></td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="password" name="password" /></td>
-			</tr>
-			<tr>
-				<td>Address</td>
-				<td><input type="text" name="address" /></td>
-			</tr>
-			<tr>
-				<td>Contact No</td>
-				<td><input type="text" name="contact" /></td>
-			</tr>
-		</table>
-	</s:form>-->
 
 </body>
 </html>
