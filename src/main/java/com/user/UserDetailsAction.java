@@ -2,46 +2,46 @@ package com.user;
 
 public class UserDetailsAction {
 
-	private int Phone;
-	private String UserName, Email, Address;
-
+	private int phone;
+	private String username, email, address;
+	
 	public int getPhone() {
-		return Phone;
+		return phone;
 	}
 
 	public void setPhone(int phone) {
-		Phone = phone;
+		this.phone = phone;
 	}
 
-	public String getUserName() {
-		return UserName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		UserName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 
 	public void setAddress(String address) {
-		Address = address;
-	}	
+		this.address = address;
+	}
 
-	
+
 	@Override
 	public String toString() {
-		return "UserDetailsAction [Phone=" + Phone + ", UserName=" + UserName + ", Email=" + Email + ", Address="
-				+ Address + "]";
+		return "UserDetailsAction [phone=" + phone + ", username=" + username + ", email=" + email + ", address="
+				+ address + "]";
 	}
 
 	public String execute() {

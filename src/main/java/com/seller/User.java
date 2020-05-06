@@ -1,46 +1,62 @@
 package com.seller;
 
 public class User {
-	private int Price, Phone;  
-	private String Item,UserName,Email,Address;
-	
+	private int price, phone;
+	private String item, username, email, address;
+
 	public int getPrice() {
-		return Price;
+		return price;
 	}
+
 	public void setPrice(int price) {
-		Price = price;
+		this.price = price;
 	}
+
 	public int getPhone() {
-		return Phone;
+		return phone;
 	}
+
 	public void setPhone(int phone) {
-		Phone = phone;
+		this.phone = phone;
 	}
+
 	public String getItem() {
-		return Item;
+		return item;
 	}
+
 	public void setItem(String item) {
-		Item = item;
+		this.item = item;
 	}
-	public String getUserName() {
-		return UserName;
+
+	public String getUsername() {
+		return username;
 	}
-	public void setUserName(String userName) {
-		UserName = userName;
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
+
 	public String getEmail() {
-		return Email;
+		return email;
 	}
+
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
+
 	public String getAddress() {
-		return Address;
+		return address;
 	}
+
 	public void setAddress(String address) {
-		Address = address;
-	} 
-	
-	
+		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "User [price=" + price + ", phone=" + phone + ", item=" + item + ", username=" + username + ", email="
+				+ email + ", address=" + address + "]";
+	}
+
 	
 }

@@ -1,23 +1,23 @@
 package com.user;
 
 public class UserBidAction {
-	private int Price;
-	private String Item;
+	private int price;
+	private String item;
 	
 	public int getPrice() {
-		return Price;
+		return price;
 	}
 
 	public void setPrice(int price) {
-		Price = price;
+		this.price = price;
 	}
 
 	public String getItem() {
-		return Item;
+		return item;
 	}
 
 	public void setItem(String item) {
-		Item = item;
+		this.item = item;
 	}
 
 	public String execute() {

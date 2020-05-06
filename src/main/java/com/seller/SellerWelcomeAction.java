@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class SellerWelcomeAction {
+
 	private static final Logger logger = LoggerFactory.getLogger("SellerWelcomeAction");
 
 	ArrayList<User> list = new ArrayList<User>();
@@ -39,14 +40,14 @@ public class SellerWelcomeAction {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 
-			// logger.info("rs: " + rs);
+			logger.info("rs: " + rs);
 
 			while (rs.next()) {
 				logger.info("rs has row");
 				User user = new User();
 				user.setPrice(rs.getInt("price"));
 				user.setItem(rs.getString("item"));
-				user.setUserName(rs.getString("userName"));
+				user.setUsername(rs.getString("username"));
 				user.setEmail(rs.getString("email"));
 				user.setPhone(rs.getInt("phone"));
 				user.setAddress(rs.getString("address"));
@@ -54,14 +55,14 @@ public class SellerWelcomeAction {
 				// logger.info("rs user: " + user);
 				logger.info("Data retrieved....");
 			}
-			if(con!=null) {
+			if (con != null) {
 				con.close();
 			}
-
 
 		} catch (Exception e) {
 
 		}
 		return "success";
 	}
+
 }

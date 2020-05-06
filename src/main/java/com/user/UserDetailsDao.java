@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 public class UserDetailsDao {
 	private static final Logger logger = LoggerFactory.getLogger("UserDetailsDao");
-	public static String Email;
+	public static String username;
 
 	public static int save(UserDetailsAction ud) {
 		// TODO Auto-generated method stub
@@ -28,14 +28,14 @@ public class UserDetailsDao {
 			String sql = "insert into auction.auctionuserdetails(UserName, Email, Phone, Address) values (?,?,?,?)";
 			PreparedStatement ps = con.prepareStatement(sql);
 
-			Email = ud.getEmail();
-			ps.setString(1, ud.getUserName());
+			username = ud.getUsername();
+			ps.setString(1, ud.getUsername());
 			ps.setString(2, ud.getEmail());
 			ps.setInt(3, ud.getPhone());
 			ps.setString(4, ud.getAddress());
 
 			status = ps.executeUpdate();
-			logger.info("Updated....");
+			logger.info("Updated user details....");
 			if (con != null) {
 				con.close();
 			}
@@ -61,7 +61,8 @@ public class UserDetailsDao {
 				logger.info("connection established for bid....");
 			}
 			
-			String sql = "update auction.auctionuserdetails set Price=? where Email = '"+Email+"'";
+			//String sql = "insert into auction.biddetails(Price, Item, UserName) values (?,?,'"+username+"')";
+			String sql = "update auction.auctionuserdetails set Price=? where Email = '"+username+"'";
 	
 			PreparedStatement ps = con.prepareStatement(sql);	
 
