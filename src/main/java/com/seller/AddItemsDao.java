@@ -25,14 +25,12 @@ public class AddItemsDao {
 			if (con != null) {
 				logger.info("connection established....");
 			}
-			// String sql = "insert into auction.additem(SellerName, Item, ActiveBid) values
-			// ('" + sellername + "',?,?,'Yes')";
+			
 			String sql = "insert into auction.additem(SellerName, Item, Price, ActiveBid) values (?,?,?,?)";
 
 			PreparedStatement ps = con.prepareStatement(sql);
 
-			ps.setString(1, "suji");
-			//ps.setString(1, sellername);
+			ps.setString(1, ai.getSellername());
 			ps.setString(2, ai.getItem());
 			ps.setInt(3, 0);
 			ps.setString(4, "Yes");

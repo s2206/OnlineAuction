@@ -1,11 +1,11 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 
-<h1>Welcome Seller</h1>
+<h1>Welcome Seller <s:property value="#session.sellername"/></h1>
 <br>
 
 <div>
 	<h3>Place item to bid</h3>
-	<s:a value="/seller/addItem.jsp"> Add Item to Bid</s:a>
+	<s:a value="/seller/addItem.jsp"> Add Item to Bid</s:a>	
 </div>
 <br>
 

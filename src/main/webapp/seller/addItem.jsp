@@ -4,7 +4,7 @@
 
 
 <s:form action="additem" mehtod="post">
-	<s:property value="LoginAction.sellername" />
+	<s:hidden name="sellername" value="%{#session.sellername}" />
 	<s:textfield label="Item" name="item"></s:textfield>
 	<!--<s:textfield label="Price" name="price"></s:textfield>-->
 

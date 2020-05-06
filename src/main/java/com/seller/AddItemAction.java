@@ -1,9 +1,9 @@
 package com.seller;
 
 public class AddItemAction {
-	private int price ;
-	private String sellername, item,activebid;
-	
+	private int price;
+	private String sellername, item, activebid;
+
 	public int getPrice() {
 		return price;
 	}
@@ -44,5 +44,5 @@ public class AddItemAction {
 		}
 		return "error";
 	}
-	
+
 }

@@ -31,23 +31,3 @@
 </div>
 <br>
 <s:a value="/seller/sellerwelcomepage.jsp">Return to seller welcome page</s:a>
-
-
-<!--<s:iterator value="list">
-			<fieldset>
-				<s:property value="price" />
-				<br />
-				<s:property value="item" />
-				<br />
-				<s:property value="username" />
-				<br />
-				<s:property value="email" />
-				<br />
-				<s:property value="phone" />
-				<br />
-				<s:property value="address" />
-				<br />
-			</fieldset>
-		</s:iterator>
-<br>-->
-
